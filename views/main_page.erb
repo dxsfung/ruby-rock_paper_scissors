@@ -1,0 +1,53 @@
+<h1>Two Players Play Here</h1>
+<form action='/display'>
+    <div class="form-group">
+        <h3>Player 1
+            <select name="p1" id="p1">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </h3>
+    </div>
+    <div class="form-group">
+        <h3>Player 2
+            <select name="p2" id="p2">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </h3>
+    </div>
+    <button type="submit" class="btn">Go!</button>
+</form>
+
+<div>
+    <h3>Two Players Result:
+        <%=@p1weapon%>
+        <%=@result%>
+        <%=@p2weapon%></h3>
+</div>
+
+<hr>
+
+<h1>One Player Plays with Computer Here</h1>
+
+<form action='/computer'>
+    <div class="form-group">
+        <h3>Player 1
+            <select name="p1" id="p1">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </h3>
+    </div>
+    <button type="submit" class="btn">Play with computer</button>
+</form>
+
+<div>
+    <h3>One Player Result:
+        <%=@p1_weapon%>
+        <%=@ai_result%>
+        <%=@ai_weapon%></h3>
+</div>
