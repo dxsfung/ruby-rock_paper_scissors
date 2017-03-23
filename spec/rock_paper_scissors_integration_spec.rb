@@ -6,26 +6,21 @@ require('capybara/rspec')
   describe('the rock paper scissors path', {:type => :feature}) do
     it('processes the user entries and returns results') do
       visit('/')
-      # find("option[value='rock']").click
-      find(:select, from, options).find(:option, value, options).select_option
+      # find(:select, from, options).find(:option, value, options).select_option
+      # find('p1').find('rock').select_option
+      # fill_in('p1', :with => 'rock')
+      # click_button('Send')
+      click_button('Go!')
+      expect(page).to have_content('Ties')
+    end
+    it('processes the user entries and returns results') do
+      visit('/')
+      # find(:select, from, options).find(:option, value, options).select_option
+      # find('Player 1').find('paper').select_option
+      # fill_in('p1', :with => 'rock')
+      # click_button('Send')
+      click_button('Play with computer')
+      expect(page).to have_content('Random')
+    end
 
-      # fill-in('Player 1', find("option[value='rock']").click)
-      # fill-in('Player 2', find("option[value='paper']").click)
-      click_button('Go!')
-      # expect(page).to have_content('Player 1 Rock Loses')
-    end
-    it('processes the user entries and returns results') do
-      visit('/')
-      # fill-in('Player 1', find("option[value='rock']").click)
-      # fill-in('Player 2', find("option[value='rock']").click)
-      click_button('Go!')
-      # expect(page).to have_content('Ties')
-    end
-    it('processes the user entries and returns results') do
-      visit('/')
-      # fill-in('Player 1', find("option[value='rock']").click)
-      # fill-in('Player 2', find("option[value='scissors']").click)
-      click_button('Go!')
-      # expect(page).to have_content('Player 1 Rock Wins')
-    end
   end

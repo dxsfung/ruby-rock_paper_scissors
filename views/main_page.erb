@@ -49,15 +49,15 @@
     <h3>One Player Result:
         <%=@p1_weapon%>
         <%if defined? @ai_result%>
-        <%if @ai_result.has_key?(:display)%>
-        <%=@ai_result.fetch(:display)%>
-        <%end%>
-        <%=@ai_weapon%>
+          <%if @ai_result.has_key?(:display)%>
+          <%=@ai_result.fetch(:display)%>
+          <%end%>
+          <%=@ai_weapon%>
         <%end%>
         <%if defined? @ai_result%>
-        <% if @ai_result.has_key?(:player2)%>
-        <%=@ai_result.fetch(:player2).capitalize()%>
-        <%end%>
+          <% if @ai_result.has_key?(:player2)%>
+          <%=@ai_result.fetch(:player2).capitalize() %> (Random)
+          <%end%>
         <%end%>
     </h3>
 </div>
