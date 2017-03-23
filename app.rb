@@ -10,7 +10,7 @@ end
 get('/display') do
     @p1weapon = "Player 1 " + params.fetch('p1').capitalize()
     @p2weapon = "Player 2 " + params.fetch('p2').capitalize()
-    @result = params.fetch('p1').beats(params.fetch('p2'))
+    @result = params.fetch('p1').beats(params.fetch('p2')).fetch(:display)
     erb(:main_page)
 end
 

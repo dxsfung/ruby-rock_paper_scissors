@@ -48,6 +48,17 @@
 <div>
     <h3>One Player Result:
         <%=@p1_weapon%>
-        <%=@ai_result%>
-        <%=@ai_weapon%></h3>
+        <%if defined? @ai_result%>
+          <%if @ai_result.has_key?(:display)%>
+          <%=@ai_result.fetch(:display)%>
+          <%end%>
+          <%=@ai_weapon%>
+        <%end%>
+        <%if defined? @ai_result%>
+          <% if @ai_result.has_key?(:player2)%>
+          <%=@ai_result.fetch(:player2).capitalize()%>
+          <%end%>
+        <%end%>
+
+    </h3>
 </div>

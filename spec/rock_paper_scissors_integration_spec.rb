@@ -7,6 +7,8 @@ require('capybara/rspec')
     it('processes the user entries and returns results') do
       visit('/')
       # find("option[value='rock']").click
+      find(:select, from, options).find(:option, value, options).select_option
+
       # fill-in('Player 1', find("option[value='rock']").click)
       # fill-in('Player 2', find("option[value='paper']").click)
       click_button('Go!')
